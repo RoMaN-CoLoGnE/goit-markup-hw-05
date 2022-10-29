@@ -27,7 +27,7 @@
             <a class="menu-logo" href="./index.html"> Web<span class="logo-part">Studio</span> </a>
             <ul class="menu-list list">
               <li class="menu-item">
-                <a class="menu-link" href="./index.html">Студія</a>
+                <a class="menu-link link-after" href="./index.html">Студія</a>
               </li>
               <li class="menu-item">
                 <a class="menu-link" href="./portfolio.html">Портфоліо</a>
@@ -63,7 +63,7 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="hero-button" type="button">Замовити послугу</button>
+          <button class="hero-button" type="button" data-modal-open>Замовити послугу</button>
         </div>
       </section>
       <!-- Features -->
@@ -130,6 +130,9 @@
                 alt="Програмування вебсайтів та додатків"
                 width="370"
               />
+              <div class="gallery-picture-overlay">
+                <p class="overlay-text">Десктопні додатки</p>
+              </div>
             </li>
             <li class="gallery-item">
               <img
@@ -138,6 +141,9 @@
                 alt="Адаптивний веб-дизайн сайтів"
                 width="370"
               />
+              <div class="gallery-picture-overlay">
+                <p class="overlay-text">Мобільні додатки</p>
+              </div>
             </li>
             <li class="gallery-item">
               <img
@@ -146,6 +152,9 @@
                 alt="Вибір кольору та дизайну сайту"
                 width="370"
               />
+              <div class="gallery-picture-overlay">
+                <p class="overlay-text">Дизайнерські рішення</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -442,5 +451,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <a class="modal-link" href="#" data-modal-close>
+          <svg class="modal-icon" width="18px" height="18px">
+            <use href="./assets/images/svg/icons.svg#icon-close"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <script src="./assets/js/modal.js"></script>
   </body>
 </html>
