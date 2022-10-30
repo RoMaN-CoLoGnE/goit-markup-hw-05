@@ -76,6 +76,7 @@ img {
 }
 
 .section-title {
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -143,6 +144,7 @@ img {
 }
 
 .menu-logo {
+  margin-right: 90px;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -166,7 +168,6 @@ img {
   display: flex;
   align-items: center;
   gap: 50px;
-  margin: 0 0 0 90px;
 }
 
 .menu-item {
@@ -183,11 +184,14 @@ img {
 }
 
 .menu-link:hover,
-.menu-link:focus {
+.menu-link:focus,
+.menu-link-current {
   color: var(--basic-blue-color);
 }
 
-.link-after::after {
+
+
+.menu-link-current::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -207,8 +211,8 @@ img {
   color: var(--basic-grey-color);
 }
 
-.contacts-item:last-child {
-  margin-left: 50px;
+.contacts-item:first-child {
+  margin-right: 50px;
 }
 
 .contacts-link {
@@ -315,6 +319,7 @@ img {
 }
 
 .features-item-title {
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -324,7 +329,6 @@ img {
 
 .features-text {
   line-height: 1.71;
-  margin-top: 10px;
   color: var(--basic-grey-color);
 }
 
@@ -332,7 +336,6 @@ img {
 .gallery-list {
   display: flex;
   justify-content: center;
-  margin: 50px 0 0;
   gap: 30px;
 }
 
@@ -373,7 +376,6 @@ img {
 .our-team-list {
   display: flex;
   justify-content: center;
-  margin: 50px 0 0;
   gap: 30px;
 }
 
@@ -419,7 +421,6 @@ img {
   align-items: center;
   justify-content: center;
   gap: 30px;
-  margin: 50px 0 0 0;
 }
 
 .partners-item {
@@ -462,7 +463,13 @@ img {
   align-items: baseline;
 }
 
+.footer-contacts {
+  margin-right: 70px;
+}
+
 .footer-logo {
+  display: block;
+  margin-bottom: 20px;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -476,7 +483,6 @@ img {
 }
 
 .footer-address {
-  margin-top: 20px;
   font-style: normal;
 }
 
@@ -505,10 +511,6 @@ img {
   color: var(--basic-blue-color);
 }
 
-.social-wrapper {
-  margin-left: 70px;
-}
-
 .social-title {
   margin-bottom: 20px;
 
@@ -527,7 +529,7 @@ img {
 .portfolio-filter {
   display: flex;
   justify-content: center;
-  margin: 0;
+  margin-bottom: 50px;
   gap: 8px;
 }
 
@@ -562,13 +564,10 @@ img {
 .portfolio-cards {
   display: flex;
   flex-wrap: wrap;
-  margin: 50px 0 0;
   gap: 30px;
 }
 
 .cards-link {
-  position: relative;
-
   display: block;
 
   transition: box-shadow var(--animation-timing-function);
@@ -598,8 +597,9 @@ img {
   content: '';
   display: block;
   padding: 63px 24px;
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform var(--animation-timing-function);
+  will-change: transform;
 
   width: 100%;
   height: 100%;
@@ -648,18 +648,29 @@ img {
   height: 100%;
 
   background-color: rgba(0, 0, 0, 0.2);
+
+  transition: opacity 150ms linear, visibility 150ms linear;
+  will-change: opacity;
 }
 
 .backdrop.is-hidden {
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
 }
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -60%);
+}
+
 
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: transform 300ms ease-out;
+  will-change: transform;
 
   min-width: 528px;
   min-height: 581px;
@@ -670,7 +681,7 @@ img {
   border-radius: 4px;
 }
 
-.modal-link {
+.modal-close-button {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -678,9 +689,12 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
   width: 30px;
   height: 30px;
 
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  cursor: pointer;
+  background-color: unset;
 }
