@@ -221,7 +221,8 @@ img {
   color: currentColor;
   fill: currentColor;
 
-  transition: color var(--animation-timing-function), fill var(--animation-timing-function);
+  transition: color var(--animation-timing-function),
+    fill var(--animation-timing-function);
 }
 
 .contacts-link:hover,
@@ -674,6 +675,7 @@ img {
 
   min-width: 528px;
   min-height: 581px;
+  padding: 30px;
 
   background-color: var(--basic-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -697,4 +699,44 @@ img {
   border-radius: 50%;
   cursor: pointer;
   background-color: unset;
+}
+
+/* forms */
+
+label {
+  display: block;
+}
+
+textarea {
+  min-height: 100px;
+  max-height: 250px;
+  resize: vertical;
+}
+
+.form-checkbox {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.one {
+  opacity: 1;
+  fill: blueviolet;
+  transition: 300ms;
+}
+
+.two {
+  opacity: 0;
+  fill: #188ce8;
+  transition: 300ms;
+}
+
+.checkbox:checked+.icon .two {
+  opacity: 1;
+}
+
+.checkbox:checked+.icon .one {
+  opacity: 0;
 }

@@ -388,75 +388,71 @@
     </main>
     <!-- Footer -->
     <footer class="footer">
-      <div class="container">
-        <div class="footer-container">
-          <div class="footer-contacts">
-            <a class="footer-logo" href="./index.html">
-              Web<span class="logo-part">Studio</span>
-            </a>
-            <address class="footer-address">
-              <ul class="footer-list">
-                <li class="footer-item">
-                  <a
-                    class="footer-link link-map"
-                    href="https://goo.gl/maps/8viNXfXdV3uJQZfFA"
-                    target="_blank"
-                    rel="noopener noreferrer nofollow"
-                  >
-                    м. Київ, пр-т Лесі Українки, 26
-                  </a>
-                </li>
-                <li class="footer-item">
-                  <a class="footer-link" href="mailto:info@devstudio.com"> info@devstudio.com </a>
-                </li>
-                <li class="footer-item">
-                  <a class="footer-link" href="tel:+380961111111"> +38 096 111 11 11 </a>
-                </li>
-              </ul>
-            </address>
-          </div>
-          <div class="social-wrapper">
-            <p class="social-title">приєднуйтесь</p>
-            <ul class="social-list">
-              <li class="social-item">
-                <!-- Добавить aria-label -->
+      <div class="container footer-container">
+        <div class="footer-contacts">
+          <a class="footer-logo" href="./index.html"> Web<span class="logo-part">Studio</span> </a>
+          <address class="footer-address">
+            <ul class="footer-list">
+              <li class="footer-item">
                 <a
-                  class="social-link footer-social-link"
-                  href="#"
-                  aria-label="Посилання на Instagram"
+                  class="footer-link link-map"
+                  href="https://goo.gl/maps/8viNXfXdV3uJQZfFA"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
                 >
-                  <svg class="social-icon" width="20px" height="20px">
-                    <use href="./assets/images/svg/icons.svg#instagram-icon"></use>
-                  </svg>
+                  м. Київ, пр-т Лесі Українки, 26
                 </a>
               </li>
-              <li class="social-item">
-                <a class="social-link footer-social-link" href="#">
-                  <svg class="social-icon" width="20px" height="20px">
-                    <use href="./assets/images/svg/icons.svg#twitter-icon"></use>
-                  </svg>
-                </a>
+              <li class="footer-item">
+                <a class="footer-link" href="mailto:info@devstudio.com"> info@devstudio.com </a>
               </li>
-              <li class="social-item">
-                <a class="social-link footer-social-link" href="#">
-                  <svg class="social-icon" width="20px" height="20px">
-                    <use href="./assets/images/svg/icons.svg#facebook-icon"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social-item">
-                <a class="social-link footer-social-link" href="#">
-                  <svg class="social-icon" width="20px" height="20px">
-                    <use href="./assets/images/svg/icons.svg#linkedin-icon"></use>
-                  </svg>
-                </a>
+              <li class="footer-item">
+                <a class="footer-link" href="tel:+380961111111"> +38 096 111 11 11 </a>
               </li>
             </ul>
-          </div>
+          </address>
+        </div>
+        <div class="social-wrapper">
+          <p class="social-title">приєднуйтесь</p>
+          <ul class="social-list">
+            <li class="social-item">
+              <!-- Добавить aria-label -->
+              <a
+                class="social-link footer-social-link"
+                href="#"
+                aria-label="Посилання на Instagram"
+              >
+                <svg class="social-icon" width="20px" height="20px">
+                  <use href="./assets/images/svg/icons.svg#instagram-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-item">
+              <a class="social-link footer-social-link" href="#">
+                <svg class="social-icon" width="20px" height="20px">
+                  <use href="./assets/images/svg/icons.svg#twitter-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-item">
+              <a class="social-link footer-social-link" href="#">
+                <svg class="social-icon" width="20px" height="20px">
+                  <use href="./assets/images/svg/icons.svg#facebook-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-item">
+              <a class="social-link footer-social-link" href="#">
+                <svg class="social-icon" width="20px" height="20px">
+                  <use href="./assets/images/svg/icons.svg#linkedin-icon"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button
           class="modal-close-button"
@@ -468,6 +464,44 @@
             <use href="./assets/images/svg/icons.svg#icon-close"></use>
           </svg>
         </button>
+
+        <form name="registration_form">
+          <label>
+            User name
+            <input type="text" name="user_name" placeholder="Andrew Black" minlength="3" />
+          </label>
+          <label>
+            User phone
+            <input type="tel" name="user_tel" />
+          </label>
+          <label>
+            User mail
+            <input type="text" name="user_mail" />
+          </label>
+          <p>Choose a color:</p>
+          <label>
+            <input type="radio" name="color" value="red" />
+            Red
+          </label>
+          <label>
+            <input type="radio" name="color" value="white" />
+            White
+          </label>
+          <label>
+            <input type="radio" name="color" value="green" />
+            Green
+          </label>
+          <textarea name="" id="" rows="15"></textarea>
+          <label class="form-checkbox">
+            <input class="checkbox visually-hidden" type="checkbox" name="" />
+            <svg class="icon" width="20" height="20">
+              <use class="one" href="./assets/images/svg/icons.svg#instagram-icon"></use>
+              <use class="two" href="./assets/images/svg/icons.svg#twitter-icon"></use>
+            </svg>
+            policy
+          </label>
+          <button type="submit">Submit</button>
+        </form>
       </div>
     </div>
     <script src="./assets/js/modal.js"></script>
