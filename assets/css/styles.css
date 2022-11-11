@@ -408,7 +408,6 @@ img {
   color: var(--basic-black-color);
 }
 
-/* Margin-top übberarbeiten und besser auf margin-botton ändern! */
 .our-team-text {
   margin-top: 10px;
   margin-bottom: 16px;
@@ -699,44 +698,4 @@ img {
   border-radius: 50%;
   cursor: pointer;
   background-color: unset;
-}
-
-/* forms */
-
-label {
-  display: block;
-}
-
-textarea {
-  min-height: 100px;
-  max-height: 250px;
-  resize: vertical;
-}
-
-.form-checkbox {
-  margin: 20px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-}
-
-.one {
-  opacity: 1;
-  fill: blueviolet;
-  transition: 300ms;
-}
-
-.two {
-  opacity: 0;
-  fill: #188ce8;
-  transition: 300ms;
-}
-
-.checkbox:checked+.icon .two {
-  opacity: 1;
-}
-
-.checkbox:checked+.icon .one {
-  opacity: 0;
 }
